@@ -443,14 +443,14 @@
 							<div class="social" style="float:right;">
 								<!--<div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like">&nbsp;</div>-->
 								<a href="{ReblogURL}" title="Reblog on Tumblr"><i class="fa fa-tumblr-square fa-2x"></i></a>
-								<a href="http://www.facebook.com/share.php?u={ShortURL}&title={block:Quote}{Quote}{/block:Quote}{block:Text}{Title}{/block:Text}{block:Link}{Name}{/block:Link}{block:Chat}{Title}{/block:Chat}{block:Audio}{TrackName}{/block:Audio}" title="Share on Facebook" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
-								<a title="Share on Twitter" targ2et="_blank" onclick="openTW('http://twitter.com/home?status={block:Quote}{Quote}{/block:Quote}{block:Text}{Title}{/block:Text}{block:Link}{Name}{/block:Link}{block:Chat}{Title}{/block:Chat}{block:Audio}{TrackName}{/block:Audio}+{ShortURL}+@adriankal')"><i class="fa fa-twitter fa-2x"></i></a>
+								<a onclick="openLink('http://www.facebook.com/share.php?u={ShortURL}&title={block:Quote}{Quote}{/block:Quote}{block:Text}{Title}{/block:Text}{block:Link}{Name}{/block:Link}{block:Chat}{Title}{/block:Chat}{block:Audio}{TrackName}{/block:Audio}')" title="Share on Facebook" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+								<a title="Share on Twitter" targ2et="_blank" onclick="openLink('http://twitter.com/home?status={block:Quote}{Quote}{/block:Quote}{block:Text}{Title}{/block:Text}{block:Link}{Name}{/block:Link}{block:Chat}{Title}{/block:Chat}{block:Audio}{TrackName}{/block:Audio}+{ShortURL}+@adriankal')"><i class="fa fa-twitter fa-2x"></i></a>
 								<script>
-                                    function openTW(link) {
+                                    function openLink(link) {
                                         window.open(link, "","width=500, height=100"); 
                                     }
                                 </script>
-								<a href="https://plus.google.com/share?url={ShortURL}" class="googleplus" title="Share on Google Plus" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a>
+								<a onclick="openLink('https://plus.google.com/share?url={Permalink}')" class="googleplus" title="Share on Google Plus" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a>
 								<!--<a href="http://www.stumbleupon.com/submit?url={ShortURL}&title={block:Quote}{Quote}{/block:Quote}{block:Text}{Title}{/block:Text}{block:Link}{Name}{/block:Link}{block:Chat}{Title}{/block:Chat}{block:Audio}{TrackName}{/block:Audio}" class="stumble">&nbsp;</a>-->
 							</div>	
 							{block:PermalinkPage}
