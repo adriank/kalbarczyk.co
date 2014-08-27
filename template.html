@@ -78,8 +78,8 @@
               h1, .h1 { font-size: 48px; }
               h2, .h2 { font-size: 32px; }
               h3, .h3 { font-size: 24px; }
-              p, .p, ul, ol { font-size: 20px;}
-              small, .small { font-size: 16px;}
+              p, .p, ul, ol { font-size: 18px;}
+              small, .small { font-size: 14px;}
             }
             
 /*            @media screen and (min-width: 640px) {
@@ -471,8 +471,11 @@
   				  </aside>
   				{/block:PostNotes}
 
+				{block:IndexPage}
+				    <br/>
+				{/block:IndexPage}
 				{/block:Posts}
-				
+
                 {block:IfDisqusShortname}
                 {block:PermalinkPage}
                 <br/><br/> 
@@ -514,6 +517,12 @@
 				{/block:Pages}
   		</ul>
 		{/block:HasPages}
+		<br/>
+		<hr/>
+		<h3>Projects and external links</h3>
+		<a href="http://adriank.github.io/ObjectPath"><i class="fa fa-external-link"></i> ObjectPath - agile query language for semi-structured data</a><br/>
+		<a href="http://asyncode.com/"><i class="fa fa-external-link"></i>Asyncode Ltd. - my company</a>
+		
 		{block:AskEnabled}<a href="/ask">{AskLabel}</a>{/block:AskEnabled}
 	  {block:IfColophon}<p class="small">{text:Colophon}</p>{block:IfColophon}
 	</footer>
