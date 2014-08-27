@@ -1,30 +1,25 @@
 <!DOCTYPE html>
-<!--
- 
-      Theme: Ashley v0.6
-      Author: Jxnblk  [http://jxnblk.com]
-      For: Tumblr  [http://tumblr.com/]
-      Terms: Protected under Creative Commons. [http://creativecommons.org/licenses/by-nc/3.0/]
-  
--->
 <html lang="en">
 <head> 
     <meta charset="UTF-8">
 		<!-- Custom Variables -->
 		<meta name="image:Logo" content=""/>
-		<meta name="text:Colophon" content="Ashley theme by Jxnblk"/>
+		<meta name="text:Colophon" content=""/>
 		<meta name="text:GoogleWebFont" content="Gentium Book Basic"/>
 		<meta name="text:GoogleWebFontURL" content="Gentium+Book+Basic"/>
 		<meta name="color:Background" content="#fff"/>
-    <meta name="color:Text" content="#444"/>
-    <meta name="color:Link" content="#09b"/>
+        <meta name="color:Text" content="#444"/>
+        <meta name="color:Link" content="#09b"/>
+		<meta name='text:Disqus Shortname' content='' />
+		
 		<title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
 		{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
 		<link rel="shortcut icon" href="{Favicon}">
 		<link rel="apple-touch-icon" href="{PortraitURL-128}">
 		<link rel="alternate" type="application/rss+xml" href="{RSS}">
     {block:IfGoogleWebFont}
-      <link href='http://fonts.googleapis.com/css?family={text:GoogleWebFontURL}' rel='stylesheet' type='text/css'>
+	<!--<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href='http://fonts.googleapis.com/css?family={text:GoogleWebFontURL}' rel='stylesheet' type='text/css'>
     {/block:IfGoogleWebFont}
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <meta name=viewport content='width=device-width, initial-scale=1'>
@@ -87,12 +82,12 @@
               small, .small { font-size: 16px;}
             }
             
-            @media screen and (min-width: 640px) {
+/*            @media screen and (min-width: 640px) {
               h1, .h1 { font-size: 64px; }
               h2, .h2 { font-size: 48px; } 
               h3, .h3 { font-size: 32px; }
             }
-      
+*/     
       
       .wrap {
         width: 90%;
@@ -382,11 +377,13 @@
 						{/block:Quote}
 
 						{block:Link}
-							<h2><a href="{URL}"{Target}>{Name} &raquo;</a></h2>
+						<span style="text-align:center;">
+							<h3><a href="{URL}"{Target}><i class="fa fa-link"></i> {Name}</a></h3>
 
 							{block:Description}
 								{Description}
 							{/block:Description}
+						</span>
 						{/block:Link}
 
 						{block:Chat}
@@ -430,7 +427,6 @@
 							{Answer}
 						{/block:Answer}
 
-						{block:Date}
 						<footer style="display:block;">
 							<ul class="small" style="float:left">
 								<li><a href="{Permalink}" title="{DayOfWeek}, {DayOfMonth} {Month} {Year}, {24Hour}:{Minutes}:{Seconds}">{TimeAgo}</a></li>
@@ -443,16 +439,17 @@
 							<div class="social" style="float:right;">
 								<!--<div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like">&nbsp;</div>-->
 								<a href="{ReblogURL}" title="Reblog on Tumblr"><i class="fa fa-tumblr-square fa-2x"></i></a>
-								<a onclick="openLink('http://www.facebook.com/share.php?u={ShortURL}&title={block:Quote}{Quote}{/block:Quote}{block:Text}{Title}{/block:Text}{block:Link}{Name}{/block:Link}{block:Chat}{Title}{/block:Chat}{block:Audio}{TrackName}{/block:Audio}')" title="Share on Facebook" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
-								<a title="Share on Twitter" targ2et="_blank" onclick="openLink('http://twitter.com/home?status={block:Quote}{Quote}{/block:Quote}{block:Text}{Title}{/block:Text}{block:Link}{Name}{/block:Link}{block:Chat}{Title}{/block:Chat}{block:Audio}{TrackName}{/block:Audio}+{ShortURL}+@adriankal')"><i class="fa fa-twitter fa-2x"></i></a>
+								<a onclick="openLink('http://www.facebook.com/share.php?u={Permalink}&title={block:Quote}{Quote}{/block:Quote}{block:Text}{Title}{/block:Text}{block:Link}{Name}{/block:Link}{block:Chat}{Title}{/block:Chat}{block:Audio}{TrackName}{/block:Audio}')" title="Share on Facebook" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+								<a title="Share on Twitter" targ2et="_blank" onclick="openLink('http://twitter.com/home?status={block:Quote}{Quote}{/block:Quote}{block:Text}{Title}{/block:Text}{block:Link}{Name}{/block:Link}{block:Chat}{Title}{/block:Chat}{block:Audio}{TrackName}{/block:Audio}+{Permalink}+@adriankal')"><i class="fa fa-twitter fa-2x"></i></a>
 								<script>
                                     function openLink(link) {
                                         window.open(link, "","width=500, height=100"); 
                                     }
                                 </script>
 								<a onclick="openLink('https://plus.google.com/share?url={Permalink}')" class="googleplus" title="Share on Google Plus" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a>
-								<!--<a href="http://www.stumbleupon.com/submit?url={ShortURL}&title={block:Quote}{Quote}{/block:Quote}{block:Text}{Title}{/block:Text}{block:Link}{Name}{/block:Link}{block:Chat}{Title}{/block:Chat}{block:Audio}{TrackName}{/block:Audio}" class="stumble">&nbsp;</a>-->
-							</div>	
+
+							</div>
+							
 							{block:PermalinkPage}
                                 {block:HasTags}
   									<ul class="tags">
@@ -465,7 +462,6 @@
   								{/block:HasTags}			
 							{/block:PermalinkPage}
 						</footer>
-					{/block:Date}
 				</article> <!-- /post -->			
 				
   				{block:PostNotes}
@@ -477,6 +473,28 @@
 
 				{/block:Posts}
 				
+                {block:IfDisqusShortname}
+                {block:PermalinkPage}
+                <br/><br/> 
+                <h3>Comment this article</h3>
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                    var disqus_shortname = 'kalbarczyk'; // Required - Replace <example> with your forum shortname
+                    var disqus_url = '{Permalink}'; 
+                
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+                {/block:PermalinkPage}
+                {/block:IfDisqusShortname}		
+                
 				{block:Pagination}
 					<div class="pagination p">
 						<span class="previous">{block:PreviousPage}<a href="{PreviousPage}" class="previous">{/block:PreviousPage}&laquo; Previous{block:PreviousPage}</a>{/block:PreviousPage}</span>
