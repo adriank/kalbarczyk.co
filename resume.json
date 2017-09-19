@@ -159,7 +159,9 @@
         "HTML5",
         "CSS3",
         "Javascript",
-				"Angular.JS",
+				"React.JS",
+	      "Redux",
+	      "Immutable.JS",
 				"JQuery",
 				"Twitter Bootstrap",
 				"SASS/SCSS"
@@ -169,8 +171,7 @@
       "name": "Mobile Development",
       "level": "Expert",
       "keywords": [
-        "Cordova",
-        "Ionic Framework"
+      "React Native"
       ]
     },
     {
