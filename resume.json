@@ -39,8 +39,7 @@
       "highlights": [
         "I created an open source query language for semi-structured data, ObjectPath (http://objectpath)."
       ]
-    },
-    {
+    }, {
       "company": "Codementor",
       "position": "Javascript Mentor",
       "website": "https://www.codementor.io/adriank",
@@ -82,8 +81,8 @@
       "company": "Gluu IO (Cork, Ireland)",
       "position": "Co-founder and CTO",
       "website": "http://gluu.io",
-      "startDate": "2015-12-31",
-      "endDate": "2015-04-01",
+      "startDate": "2015-04-01",
+      "endDate": "2015-12-31",
       "summary": "SaaS product that enables anyone to connect their favorite software with data processing APIs.\n\n **Used technologies**: MongoDB, NodeJS, Express.JS, JQuery, Twitter Bootstrap.",
       "highlights": [
         "Built an algorithm which limits the amount of requests per given time. It was essential in tackling throttling policies of API vendors.",
